@@ -4,10 +4,9 @@ This module contains a function that prints a formatted string
 based on first_name and last_name.
 """
 
-
 def say_my_name(first_name, last_name=""):
     """
-    Prints "My name is <first_name> <last_name>".
+    Prints "My name is <first_name> <last_name> ".
 
     Args:
         first_name (str): The first name.
@@ -21,5 +20,8 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    # Gérer un espace final attendu
-    print(f"My name is {first_name} {last_name}".strip() + " ")
+    # Inclure un espace final pour correspondre à l'attendu
+    if last_name:
+        print(f"My name is {first_name} {last_name} ")
+    else:
+        print(f"My name is {first_name} ")
