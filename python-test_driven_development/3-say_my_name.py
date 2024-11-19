@@ -3,7 +3,6 @@
 This module prints a full name.
 """
 
-
 def say_my_name(first_name, last_name=""):
     """
     Prints "My name is <first_name> <last_name>".
@@ -20,5 +19,8 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    # Utiliser rstrip() pour supprimer uniquement l'espace final, si nécessaire
-    print(f"My name is {first_name} {last_name}".rstrip())
+    # Formate la chaîne exactement comme attendu
+    if last_name:
+        print(f"My name is {first_name} {last_name}")
+    else:
+        print(f"My name is {first_name}")
