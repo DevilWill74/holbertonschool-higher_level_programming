@@ -1,2 +1,5 @@
-git add .gitignore
-git commit -m "Ajout du fichier .gitignore pour ignorer les fichiers inutiles"
+# Ignorer les fichiers main.py
+*-main.py
+
+# Ignorer le dossier __pycache__
+__pycache__/
