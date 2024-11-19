@@ -1,0 +1,2 @@
+git add .gitignore
+git commit -m "Ajout du fichier .gitignore pour ignorer les fichiers inutiles"
