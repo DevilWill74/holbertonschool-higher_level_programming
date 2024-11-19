@@ -20,5 +20,5 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    # Garantir l'espace final attendu
-    print(f"My name is {first_name} {last_name}".strip() + " ")
+    # Formatage sans espace final (attendu par défaut dans les tests)
+    print(f"My name is {first_name} {last_name}".strip())
