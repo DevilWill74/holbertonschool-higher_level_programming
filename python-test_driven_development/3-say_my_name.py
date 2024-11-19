@@ -19,6 +19,6 @@ def say_my_name(first_name, last_name=""):
 
     # Supprime l'espace superflu à la fin en ajustant la gestion des chaînes
     if last_name:
-        print("My name is {} {}".format(first_name, last_name))
+        print("My name is {} {} ".format(first_name, last_name))
     else:
         print("My name is {}".format(first_name))
