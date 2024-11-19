@@ -5,7 +5,7 @@ all elements of a matrix by a divisor.
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=None, div=None):
     """
     Divides all elements of a matrix by a divisor.
 
