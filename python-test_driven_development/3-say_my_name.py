@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+This module prints a full name.
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """
     Prints "My name is <first_name> <last_name>".
@@ -14,8 +20,5 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    # Ajout explicite d'un espace supplémentaire pour correspondre aux attentes
-    if last_name:
-        print(f"My name is {first_name} {last_name} ")
-    else:
-        print(f"My name is {first_name} ")
+    # Gestion des espaces (strip pour éviter des espaces en trop et alignement)
+    print(f"My name is {first_name} {last_name}".strip())
