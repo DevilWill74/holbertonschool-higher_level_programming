@@ -19,8 +19,8 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    # Formate la chaîne exactement comme attendu
+    # Ajoute un espace supplémentaire après la chaîne imprimée
     if last_name:
-        print(f"My name is {first_name} {last_name}")
+        print(f"My name is {first_name} {last_name} ", end="")
     else:
-        print(f"My name is {first_name}")
+        print(f"My name is {first_name} ", end="")
