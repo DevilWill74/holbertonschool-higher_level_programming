@@ -21,5 +21,5 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
 
     # Construction de la sortie sans espace supplémentaire
-    full_name = f"{first_name} {last_name}".strip()
+    full_name = f"{first_name} {last_name} ".strip()
     print(f"My name is {full_name} ")
