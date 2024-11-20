@@ -2,7 +2,7 @@
 """Unittest for max_integer([..])
 """
 import unittest
-from 6-max_integer import max_integer
+from max_integer import max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """Test cases for max_integer function"""
@@ -38,4 +38,3 @@ class TestMaxInteger(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
