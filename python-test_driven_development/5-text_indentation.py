@@ -1,12 +1,6 @@
-#!/usr/bin/python3
-"""
-This module provides a function for text formatting with indentation.
-"""
-
-
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after `.`, `?`, and `:`.
+    Prints a text with 2 new lines after each '.', '?', and ':' character.
 
     Args:
         text (str): The text to format.
@@ -19,12 +13,18 @@ def text_indentation(text):
 
     result = ""
     i = 0
+    length = len(text)
 
-    while i < len(text):
+    while i < length:
         result += text[i]
         if text[i] in ".?:":
             result = result.rstrip()  # Remove trailing spaces before adding new lines
             result += "\n\n"
+            i += 1  # Move to the next character
+            # Skip all spaces after the punctuation mark
+            while i < length and text[i] == ' ':
+                i += 1
+            continue  # Continue without incrementing i again
         i += 1
 
-    print(result.strip())  # Ensure no leading or trailing spaces
+    print(result.rstrip(), end="")  # Prevent print() from adding a newline

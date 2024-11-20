@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
 This module contains a function that prints a formatted string
-based on first_name and last_name.
+based on the first_name and last_name.
 """
+
 
 def say_my_name(first_name, last_name=""):
     """
@@ -20,8 +21,5 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    # Construction de la sortie avec un espace uniquement si nécessaire
-    if last_name:
-        print(f"My name is {first_name} {last_name}")
-    else:
-        print(f"My name is {first_name} ")
+    # Print the full name, ensuring formatting is clean
+    print(f"My name is {first_name} {last_name}".strip())
