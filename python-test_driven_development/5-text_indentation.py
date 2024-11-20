@@ -1,30 +1,40 @@
+#!/usr/bin/python3
+"""
+    Insert here module comment
+
+    Write a function that prints a text with 2 new lines
+    after each of these characters: ., ? and :
+
+    Prototype: def text_indentation(text):
+
+    text must be a string, otherwise raise a TypeError
+    exception with the message text must be a string
+    There should be no space at the beginning or at the
+    end of each printed line so that you don’t miss any
+    edge case
+
+"""
+
+
 def text_indentation(text):
-    """
-    Prints a text with 2 new lines after each '.', '?', and ':' character.
-
-    Args:
-        text (str): The text to format.
-
-    Raises:
-        TypeError: If text is not a string.
-    """
-    if not isinstance(text, str):
-        raise TypeError("text must be a string")
-
-    result = ""
-    i = 0
-    length = len(text)
-
-    while i < length:
-        result += text[i]
-        if text[i] in ".?:":
-            result = result.rstrip()  # Remove trailing spaces before adding new lines
-            result += "\n\n"
-            i += 1  # Move to the next character
-            # Skip all spaces after the punctuation mark
-            while i < length and text[i] == ' ':
-                i += 1
-            continue  # Continue without incrementing i again
-        i += 1
-
-    print(result.rstrip(), end="")  # Prevent print() from adding a newline
+    """ insert doble jump line after . : or ? """
+    str_error = "text must be a string"
+    new_text = ""
+    flag = False
+    if type(text) is not str:
+        raise TypeError(str_error)
+    new_text = text.replace(". ", ".")
+    new_text = new_text.replace(": ", ":")
+    new_text = new_text.replace("? ", "?")
+    for char in new_text:
+        if char in [".", "?", ":"]:
+            print(char)
+            print()
+            flag = True
+        else:
+            if flag is False:
+                print(char, end="")
+            else:
+                if char != " ":
+                    print(char, end="")
+                    flag = False
