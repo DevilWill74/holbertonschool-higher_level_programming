@@ -1,6 +1,5 @@
--- Script to create the table second_table and insert rows
+-- Creates a table 'second_table' in the database 'hbtn_0c_0' in MySQL Server and adds multiples rows.
 
--- Create table only if it does not already exist
 CREATE TABLE IF NOT EXISTS second_table (
 	if INT,
 	name VARCHAR(256)
