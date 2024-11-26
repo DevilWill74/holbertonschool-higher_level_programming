@@ -1,6 +1,6 @@
-const $listElem = $('ul.my_list');
-const $addItemElem = $('div#add_item');
+const $headerElem = $('header');
+const $updateHeaderElem = $('div#update_header');
 
-$addItemElem.on('click', () => {
-	$listElem.append('<li>Item</li>);
+$updateHeaderElem.on('click', () => {
+  $headerElem.text('New Header!!!');
 });

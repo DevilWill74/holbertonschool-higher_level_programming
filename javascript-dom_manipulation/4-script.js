@@ -1,14 +1,6 @@
-const $headerElem = $('header');
-const $divRedHeader = $('DIV#toffle_header');
+const $listElem = $('ul.my_list');
+const $addItemElem = $('div#add_item');
 
-$divRedHeader.on('click', () => {
-	const currentClass = $headerElem.attr('class');
-
-	if(currentClass === 'green') {
-		$headerElem.toggleClass('${currentClass} red');
-	}
-
-	if (currentClass === 'red') {
-		$headerElem.toggleClass ('${currentClass} green');
-	}
+$addItemElem.on('click', () => {
+  $listElem.append('<li>Item</li>');
 });
